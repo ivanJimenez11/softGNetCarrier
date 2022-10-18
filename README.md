@@ -1,4 +1,7 @@
 # Carrier
+Proyecto FrontEnd Realizado con:
+-Angular, TypeScript, Angular Material, Html, Scss.
+!Importante para ingresar al App ---- > Usuario = jhon --- Contraseña = 1234.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
 
