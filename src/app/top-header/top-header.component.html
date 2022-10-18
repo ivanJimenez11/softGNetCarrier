@@ -1,0 +1,78 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      /* position: absolute; */
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #673ab7;
+      color: white;
+      font-weight: 600;
+      font-size: larger;
+    }
+  
+    .toolbar .iconTollbar {
+      margin: 0 16px;
+    }
+  
+    .toolbar .btn-sesion {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar .btn-sesion:hover {
+      opacity: 0.8;
+    }
+  
+   
+  </style>
+  
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <mat-icon class="iconTollbar">directions_bus</mat-icon>
+  
+    <span>Transportes Del Caribe</span>
+  
+      <div class="spacer"></div>
+      
+      <button mat-raised-button class="btn btn-sesion" (click)="logout()"> Logoutf <mat-icon>exit_to_app</mat-icon> </button>
+  </div>
+  
+  

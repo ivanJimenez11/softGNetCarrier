@@ -1,0 +1,50 @@
+<mat-dialog-content  false> 
+    <header>
+        <h2>{{textHeader}}</h2>
+        <span class="spacer"></span>
+        <button mat-raised-button  [mat-dialog-close]="" class="buttonCLose">  <mat-icon>close</mat-icon> </button>
+    </header>
+
+    <div class="containerEdit">
+        <div class="containerInputRow1">
+            <div class="divInput">
+                <mat-form-field appearance="outline" class="width100 color-blue">
+                    <mat-label>Route</mat-label>
+                    <mat-select  class="color-blue" [(ngModel)]="idRoute">
+                      <mat-option *ngFor="let itemRoute of dataSchedule" [value]="itemRoute.id">{{itemRoute.description}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-form-field" appearance="outline" style="width: 100%;">
+                    <mat-label>Week Num</mat-label>
+                    <input matInput type="number" [(ngModel)]="week">
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="containerInputRow4 narg25">
+            <div>
+                <mat-form-field class="example-form-field" appearance="outline">
+                    <mat-label>From</mat-label>
+                    <input matInput type="datetime-local" [(ngModel)]="from">
+                  </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field class="example-form-field" appearance="outline">
+                    <mat-label>To</mat-label>
+                    <input matInput type="datetime-local" [(ngModel)]="to">
+                  </mat-form-field>
+            </div>
+
+            <div style="align-self: center;"> 
+                <mat-checkbox class="example-margin" color="primary" [(ngModel)]="active" style="margin-bottom: 15px;">Active</mat-checkbox>
+            </div>
+        </div>
+
+        <div class="divBtnSave">
+            <button mat-raised-button color="primary" (click)="Submit()" class="btn btn-info"> Save </button>
+        </div>
+    </div>
+</mat-dialog-content>

@@ -1,0 +1,30 @@
+<!-- <p>login works!</p>
+<button (click)="navigatee()">Navigate</button> -->
+
+<body>
+    <mat-card class="mat-elevation-z2" style="border-radius: 20px;">
+        <img src="../../assets/img/user-purple.png" alt="Icon">
+        <h2>Welcome</h2>
+        <h5>Log in to your account to continue</h5>
+        <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()">
+            <div class="containerInputLogin">
+                <mat-form-field class="example-form-field" appearance="outline">
+                    <mat-label style="color: white">User</mat-label>
+                    <input matInput formControlName="loginUser" type="text">
+                  </mat-form-field>
+            </div>
+
+            <div class="containerInputLogin">
+                <mat-form-field class="example-form-field" appearance="outline">
+                    <mat-label style="color: white" >Password</mat-label>
+                    <input matInput formControlName="loginPassword" [type]="hide ? 'password' : 'text'" type="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                  </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="primary" type="submit" class="btnSign"> Sign In </button>
+        </form>
+    </mat-card>    
+</body>

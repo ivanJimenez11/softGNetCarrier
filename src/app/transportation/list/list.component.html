@@ -1,0 +1,91 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 style=" color: #6a1b9a; font-weight: 500 !important; font-size: 20px !important;">
+              Caribbean Transport Drivers</h3>
+        </div>
+
+        <div class="container-search">
+            <mat-form-field class="example-form-field" appearance="outline">
+                <mat-label>Search...</mat-label>
+                <input matInput type="text" [(ngModel)]="value">
+                <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+
+              <button mat-raised-button color="primary" class="btn-search">  <mat-icon>search</mat-icon> </button>
+
+              <button   mat-raised-button color="primary" (click)="openDialog(null, 'New')" class="btn btn-info" style="margin-left: 10px; margin-top: 5px; height: 100%;"><mat-icon class="iconTollbar">add_box</mat-icon>  New Driver </button>
+        </div>
+
+        <div class="card-body">
+            <table mat-table [dataSource]="dataSource" class="table table-hover" class="mat-elevation-z8">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                  </ng-container>
+                
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="lastName">
+                    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+                  </ng-container>
+                
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="firstName">
+                    <th mat-header-cell *matHeaderCellDef> First Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="ssd">
+                    <th mat-header-cell *matHeaderCellDef> Ssd </th>
+                    <td mat-cell *matCellDef="let element"> {{element.ssd}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="dob">
+                    <th mat-header-cell *matHeaderCellDef> Dob </th>
+                    <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef> Address </th>
+                    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="city">
+                    <th mat-header-cell *matHeaderCellDef> City </th>
+                    <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="zip">
+                    <th mat-header-cell *matHeaderCellDef> Zip </th>
+                    <td mat-cell *matCellDef="let element"> {{element.zip}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="phone">
+                    <th mat-header-cell *matHeaderCellDef> Phone </th>
+                    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="active">
+                    <th mat-header-cell *matHeaderCellDef> Active </th>
+                    <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+                  </ng-container>
+                
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        <button mat-raised-button color="primary" (click)=" openDialog(element, 'Edit')" class="btn-edit">  <mat-icon>edit</mat-icon> Edit </button>
+                        <button mat-raised-button color="primary" class="btn-delete" (click)=" deleteDriver(element.id)"> <mat-icon>delete</mat-icon> Delete </button>
+                         </td>
+                  </ng-container>
+                
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="highlight(row)" [ngClass]="{'highlightRowTable': selectedRowIndex == row}"></tr>
+            </table>
+        </div>
+    </div>
+</div>

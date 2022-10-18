@@ -1,0 +1,18 @@
+
+.container{
+    padding: 20px;
+}
+
+.containerAll{
+    margin: 20px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    height: calc(100vh - 100px);
+    -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    -moz-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.spacer {
+    flex: 1;
+  }

@@ -1,0 +1,12 @@
+<app-top-header></app-top-header>
+
+<div class="containerAll">
+    <div class="container">
+      <button routerLink="/list" mat-raised-button color="primary" class="btn btn-info"><mat-icon class="iconTollbar">view_list</mat-icon> List Drivers </button>
+      <button routerLink="/listVehicles" mat-raised-button color="primary" class="btn btn-info" style="margin-left: 10px"><mat-icon class="iconTollbar">view_list</mat-icon> List Vehicles </button>
+      <button routerLink="/listRoutes" mat-raised-button color="primary" class="btn btn-info" style="margin-left: 10px"><mat-icon class="iconTollbar">view_list</mat-icon> List Routes </button>
+      <button routerLink="/scheduler" mat-raised-button color="primary" class="btn btn-info" style="margin-left: 10px"><mat-icon class="iconTollbar">view_list</mat-icon> List Scheduler </button>
+    </div>
+    
+    <router-outlet></router-outlet>
+</div>

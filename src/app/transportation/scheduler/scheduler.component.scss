@@ -1,0 +1,104 @@
+.card-Scheduler{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin: 10px 0px;
+    border: 1px solid #673ab7;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-text{
+    display: flex; 
+    flex-direction: column;
+}
+
+.card-button{
+    align-self: center;
+    justify-self: end;
+}
+
+.infoCard{
+    display: flex;
+    font-size: 16px;
+    label{
+        margin-left: 10px;
+        color: #673ab78a;
+        font-weight: bold;
+    }
+    span{
+        margin-left: 10px;
+        color: #471b96;
+        font-weight: bold;
+    }
+}
+
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+.container{
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+  }
+
+td{
+    cursor: pointer;
+}
+
+  .highlightRow{
+    background: #673ab7ad;
+    span{
+        color: #471b96
+    }
+    label{
+        color: white;
+    }
+}
+
+.containerCards{
+    overflow-y: auto;
+    height: calc(100vh - 335px);
+}
+
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+.example-form-field {
+    width: 400px;
+}
+
+.container-search{
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.btn-search{
+    height: 100%;
+    margin-top: 5px;
+}
+
+.btn-edit{
+    background: #6a1b9a
+}
+
+.btn-delete{
+    background: #cd204b;
+    margin-left: 10px;
+}

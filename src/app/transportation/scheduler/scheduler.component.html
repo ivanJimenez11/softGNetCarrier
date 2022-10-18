@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3 style=" color: #6a1b9a; font-weight: 500 !important; font-size: 20px !important;">
+                Caribbean Transport Scheduler</h3>
+        </div>
+
+        <div class="container-search">
+            <mat-form-field class="example-form-field" appearance="outline">
+                <mat-label>Search...</mat-label>
+                <input matInput type="text" [(ngModel)]="value">
+                <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+
+              <button mat-raised-button color="primary" class="btn-search">  <mat-icon>search</mat-icon> </button>
+
+              <button   mat-raised-button color="primary" (click)="openDialog(null, 'New')" class="btn btn-info" style="margin-left: 10px; margin-top: 5px; height: 100%;"><mat-icon class="iconTollbar">add_box</mat-icon>  New Scheduler </button>
+        </div>
+
+        <div class="containerCards">
+            <div class="card-Scheduler" [ngClass]="{'highlightRow': selectRow == element}" (click)="highlight(element)" *ngFor="let element of dataSchedules; let index = index;">
+                <div class="card-text">
+                  <div style="display: flex;">
+                      <div class="infoCard"> <label>Id: </label> <span>{{element.id}}</span> </div>
+                      <div class="infoCard"> <label>Route Id: </label> <span>{{element.route.id}}</span> </div>
+                      <div class="infoCard"> <label>Week: </label> <span>{{element.weekNum}}</span> </div>
+                      <div class="infoCard"> <label>From: </label> <span>{{element.from}}</span> </div>   
+                      <div class="infoCard"> <label>To: </label> <span>{{element.to}}</span> </div>
+                      <div class="infoCard"> <label>Active: </label> <span>{{element.active}}</span> </div>
+                  </div>
+                 
+                  <div style="display: flex; margin-top: 10px;">
+                      <div class="infoCard"> <label>Driver Assigned: </label> <span>{{element.route.drivers.firstName}}  {{element.route.drivers.lastName}}</span> </div>
+                      <div class="infoCard"> <label>Vehicle Assigned: </label> <span>{{element.route.vehicles.description}}</span> </div>
+                  </div>
+                </div>
+      
+                <div class="card-button">
+                  <button mat-raised-button color="primary" (click)="openDialog(element, 'Edit')" class="btn-edit">  <mat-icon>edit</mat-icon> Edit </button>
+                  <button mat-raised-button color="primary" class="btn-delete" (click)="deleteSchedule(element.id)"> <mat-icon>delete</mat-icon> Delete </button>
+                </div>
+              </div>
+        </div>
+       
+    </div>
+</div>
+

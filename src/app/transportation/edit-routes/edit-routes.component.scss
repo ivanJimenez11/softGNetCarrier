@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background: #673ab7;
+    color: white;
+    padding: 0px 7px;
+    h2{
+        margin: 0px;
+    }
+}
+
+.buttonCLose{
+    padding: 0px !important;
+    min-width: 25px !important;
+    height: 25px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.spacer{
+    flex: 1 1;
+}
+
+.containerEdit{
+    padding: 15px;
+    overflow: hidden;
+    mat-form-field{
+        font-size: 12px;
+        width: 95%;
+    }
+}
+
+.containerInputRow{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+}
+
+.containerInputRow1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 80% 20%;
+}
+
+.containerInputRow2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.containerInputRow3{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.containerInputRow4{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.divBtnSave{
+    text-align: center;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 0px;
+}
+
+::ng-deep .mat-dialog-content{
+    margin: 0px;
+    padding: 0px;
+    max-height: none;
+}
+
+::ng-deep .cdk-overlay-pane{
+    max-width: none !important;
+}

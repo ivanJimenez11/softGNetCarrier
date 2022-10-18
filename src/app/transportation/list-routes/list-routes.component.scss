@@ -1,0 +1,64 @@
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+.container{
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+  }
+
+td{
+    cursor: pointer;
+}
+
+  .highlightRowTable{
+    background: #673ab7;
+    span{
+        color: white;
+    }
+    td{
+        border: none;
+        color: white;
+    }
+}
+
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.card-header{
+    color: #6a1b9a;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+}
+
+.example-form-field {
+    width: 400px;
+}
+
+.container-search{
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.btn-search{
+    height: 100%;
+    margin-top: 5px;
+}
+
+.btn-edit{
+    background: #6a1b9a
+}
+
+.btn-delete{
+    background: #cd204b;
+    margin-left: 10px;
+}
